@@ -305,6 +305,67 @@ while True:
 
     elif opcao__definida == 6:
      print('Formas de Pagamento')
+    
+   print (f' \n Valor total da compra:R$ {total:.2f} \n')
+   print ( '--- Formas de pagamento --- \n')
+   print ('1 - Pix (5% de desconto )')
+   print ('2 - Cartão de crédito\débito (sem desconto)')
+   print ('3 - Dinheiro em espéce')
+
+   forma_pagamento = input('Digite a forma de pagamento desejada: ')
+
+   if forma_pagamento == '1':
+    print ('\n--- Pagamento via Pix --- \n')
+    print('Pagamento via Pix selecionado. Você recebeu 5% de desconto!')
+    total_com_desconto = total * 0.95
+    print(f'Valor total da compra com desconto: R$ {total_com_desconto:.2f}')
+    print('Status: Aguardando pagamento via Pix... Concluído!')
+    
+   elif forma_pagamento == '2':
+    tipo_cartao = input('Digite o tipo de cartão (crédito/débito): ')
+
+    if tipo_cartao.lower() == 'crédito':
+     print (' \n--- Pagamento via Cartão --- \n')
+     print('Pagamento via cartão selecionado. Sem desconto aplicado.')
+     print(f'Valor total da compra: R$ {total:.2f}')
+     print('Status: Aguardando pagamento via cartão... Concluído!')
+    
+    elif tipo_cartao.lower() == 'débito':
+     print (' \n--- Pagamento via Cartão --- \n')    
+     print('Pagamento via cartão selecionado. Sem desconto aplicado.')
+     print(f'Valor total da compra: R$ {total:.2f}')    
+     print('Status: Aguardando pagamento via cartão... Concluído!')
+
+    elif forma_pagamento == '3':
+     print (' \n--- Pagamento em Dinheiro --- \n')
+     print('Pagamento em dinheiro selecionado. Sem desconto aplicado.')
+     print(f'Valor total da compra: R$ {total:.2f}')
+    valor_pago = float(input('Digite o valor pago em dinheiro: R$ '))
+   
+    if valor_pago >= total:
+     troco = valor_pago - total
+     print(f'Troco a ser devolvido: R$ {troco:.2f}')
+     print('Status: Pagamento em dinheiro concluído!')
+
+    else:
+        print('Valor pago insuficiente ou opção inválida. Venda cancelada, tente novamente!')
+        # Devolve o estoque se a opção de pagamento for inválida
+    
+        if nome_venda.lower() == p1_nome.lower():
+            p1_estoque += qtd_venda  
+        elif nome_venda.lower() == p2_nome.lower():
+            p2_estoque += qtd_venda
+        elif nome_venda.lower() == p3_nome.lower():
+            p3_estoque += qtd_venda
+    print('Valor pago insuficiente ou opção inválida. Venda cancelada, tente novamente!')
+    # Devolve o estoque se a opção de pagamento for inválida
+
+    if nome_venda.lower() == p1_nome.lower():
+      p1_estoque += qtd_venda  
+    elif nome_venda.lower() == p2_nome.lower():
+     p2_estoque += qtd_venda
+    elif nome_venda.lower() == p3_nome.lower():
+     p3_estoque += qtd_venda
 
     elif opcao__definida == 7:
      print('Modos de Entrega')
