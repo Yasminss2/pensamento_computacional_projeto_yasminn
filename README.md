@@ -1,7 +1,7 @@
 # 🍧 Sistema de Vendas - Açaíteria
 
 Este projeto consiste em um sistema de gerenciamento e vendas baseado em terminal para uma Açaíteria, desenvolvido inteiramente em Python. O software visa organizar o catálogo de produtos, controlar estoque, aplicar regras de promoções diárias, processar pagamentos e registrar o histórico de vendas de forma simples e eficiente.
-
+<!-- Esse projeto é meu -->
 ---
 
 ## 📌 Panoramas Gerais (Histórias de Usuário)
