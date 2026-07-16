@@ -461,7 +461,37 @@ while True:
 
 
    elif opcao__definida == '9':
-    print('Contato')
+    print('\n--- Contato ---\n')
+
+    nome = input('Digite seu nome: ')
+    email = input('Digite seu e-mail: ')
+    telefone = input('Digite seu telefone: ')
+    mensagem = input('Digite sua mensagem: ')
+
+    contato = {
+        "nome": nome,
+        "email": email,
+        "telefone": telefone,
+        "mensagem": mensagem
+    }
+
+    historico_contatos.append(contato)
+
+    print('\nObrigado pelo contato!')
+    print('Sua mensagem foi enviada com sucesso.')
+    print('Nossa equipe responderá em breve!')
+
+    print('\n--- Histórico de Contatos ---')
+
+    if historico_contatos == []:
+        print('Nenhum contato registrado.')
+    else:
+        for contato in historico_contatos:
+            print(f"Nome: {contato['nome']}")
+            print(f"E-mail: {contato['email']}")
+            print(f"Telefone: {contato['telefone']}")
+            print(f"Mensagem: {contato['mensagem']}")
+            print('-' * 30)
 
    elif opcao__definida == '0':
     print('\nObrigado(a) por utilizar o nosso sistema!')
